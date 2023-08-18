@@ -6,14 +6,12 @@
 
 ---
 ## Modelagem física
-
+### Criação do Banco de dados
 ```sql
-
--- Criação do Banco de dados
 CREATE DATABASE tecinternet_escola_felipe_barbosa CHARACTER SET utf8mb4;
-
--- Criação das Tabelas
-
+```
+### Criação das Tabelas
+```sql
 -- Cursos
 CREATE TABLE cursos (
     id TINYINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -39,8 +37,12 @@ CREATE TABLE alunos(
     segunda_nota DECIMAL(4,2) NOT NULL,
     curso_id TINYINT NOT NULL    
 );
+```
 
--- Criação das Chaves estrangeiras
+### Criação das Chaves estrangeiras
+
+```sql
+ 
 ALTER TABLE cursos
     ADD CONSTRAINT fk_cursos_professores1
     FOREIGN KEY (professor_id) REFERENCES professores(id); 
