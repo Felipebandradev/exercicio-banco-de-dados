@@ -82,6 +82,7 @@ VALUES (
 - resultado visual
 ![Tabela com alunos ja cadastrados](/img/dados-tabela-alunos.png)
 
+---
 ## UPDATE
 
 ### Colocando os Professores nos Cursos
