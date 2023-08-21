@@ -46,7 +46,7 @@ VALUES (
     "David Gilmour", 'Desenvolvimento',1
 );
 ```
-- resultado visual
+- resultado visual <br>
 ![Tabela com os professores já cadastrados](/img/dados-tabela-professores.png)
 
 ### Alunos
@@ -79,7 +79,7 @@ VALUES (
 );
 ```
 
-- resultado visual
+- resultado visual <br>
 ![Tabela com alunos ja cadastrados](/img/dados-tabela-alunos.png)
 
 ---
