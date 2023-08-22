@@ -192,3 +192,65 @@ ORDER BY alunos.nome;
 ```
 - Resposta Visual: <br>
 ![Tabela de alunos atualizada e com o nome dos cursos](/img/exercicio_treze.png)
+
+---
+
+## Desafios
+
+1)  Calcule a idade do aluno:
+
+- Código:
+```sql
+SELECT
+     nome as Aluno,
+     data_de_nascimento as 'Data de Nascimento',
+     TIMESTAMPDIFF(YEAR, data_de_nascimento, NOW())  as Idade
+FROM alunos
+ORDER BY Idade ;
+```
+
+- Resposta Visual: <br>
+![Tabela de alunos com a idade de cada](/img/desafio_um.png)
+
+---
+
+2) Calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média **maior ou igual a 7**:
+
+- Código:
+```sql
+SELECT 
+     nome as Aluno,
+     ROUND((primeira_nota + segunda_nota)/2,2) as "Média"
+FROM alunos WHERE ROUND((primeira_nota + segunda_nota)/2,2)  >= 7;
+```
+
+- Resposta Visual: <br>
+![Tabela de alunos com os alunos com as maiores médias](/img/desafio_dois.png)
+
+---
+
+3) Calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média **menor que 7**:
+
+- Código:
+```sql
+SELECT 
+     nome as Aluno,
+     ROUND((primeira_nota + segunda_nota)/2,2) as "Média"
+FROM alunos WHERE ROUND((primeira_nota + segunda_nota)/2,2)  < 7;
+```
+
+- Resposta Visual: <br>
+![Tabela de alunos com os alunos com as menores médias](/img/desafio_tres.png)
+
+4)  Mostre a quantidade de alunos com média **maior ou igual a 7**:
+
+- Código:
+```sql
+SELECT 
+     COUNT(*) as "Qtd de alunos"
+FROM alunos WHERE ROUND((primeira_nota + segunda_nota)/2,2) >= 7;
+
+```
+
+- Resposta Visual: <br>
+![Tabela de alunos com a quantidade de alunos com as maiores médias](/img/desafio_quatro.png)
